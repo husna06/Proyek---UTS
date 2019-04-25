@@ -89,7 +89,8 @@ sedangkan untuk mengambil data tanpa ngikut code yang ada di web kita bisa mengg
 koneksi.commit()
 tampil = koneksi.execute("SELECT * FROM berita")
 with open ('data_crawler.csv', newline='', mode='w')as employee_file :
-    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+    employee_writer = csv.writer(employee_file, delimiter=',', quotechar='"', 
+    quoting=csv.QUOTE_MINIMAL)
     for i in tampil:
         employee_writer.writerow(i)
 
